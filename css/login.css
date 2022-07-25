@@ -1,0 +1,74 @@
+/* --------------------------------------------------
+------------------------------- LOGIN START */
+.main__container {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__box label {
+  display: block;
+  padding-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+.form__box input[type="email"],
+.form__box input[type="password"],
+.form__box input[type="text"],
+.form__box input[type="number"],
+#productCategory,
+#productImage
+ {
+  margin-bottom: 3rem;
+  width: 35rem;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  border: 0.1rem dashed black;
+  font-size: 1.8rem;
+}
+
+#loginBtn,
+#signup,#addProductBtn {
+  padding: 1rem 3rem;
+  background-color: transparent;
+  border: 0.1rem solid black;
+  border-radius: 2rem;
+  font-size: 2rem;
+  margin: 2rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#loginBtn:hover,#signup:hover,
+#addProductBtn:hover {
+  background-color: black;
+  color: white;
+  border: 0.1rem solid black;
+}
+.main__container-register a:visited,
+.main__container-register a:link {
+  color: rgb(145, 0, 0);
+}
+#productPrice {
+  width: 10rem;
+  height: 3.5rem;
+  outline: none;
+  padding: 2rem;
+}
+
+#productCategory {
+  appearance: none;
+}
+
+#productImage {
+  display: inline-block;
+}
+/* .form__box:last-of-type {
+  align-self: flex-end;
+} */
+/* --------------------------------------------------
+------------------------------- LOGIN END */

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <!-- start 1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- End 1 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;500;900&family=Fredoka:wght@300;400;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,900&family=Open+Sans:wght@300;400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/mediaQuery.css" />
+    <title>Dots.</title>
+  </head>
+  <body>
+    <!-- Start 2 -->
+    <div class="upIcon">
+      <a href="#slider">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+    </div>
+    <!-- End 2 -->
+    <!-- <div class="loading">
+      <div class="loading__container">
+        <img src="../imgs/loading.png" alt="" />
+        <p>Loading...</p>
+      </div>
+    </div> -->
+    <!-- Header -->
+    <header class="header">
+      <div class="big__container">
+        <div class="header__container">
+          <div class="header__container-logo">
+            <h1><a href="home.html">D<span>o</span>ts.</a></h1>
+          </div>
+          <div class="header__container-links">
+            <ul>
+              <li><a href="menClothing.html">Men</a></li>
+              <li><a href="womenClothing.html">Women</a></li>
+              <li><a href="electronics.html">Electronics</a></li>
+              <li><a href="jewelery.html">Jewelery</a></li>
+            </ul>
+          </div>
+          <!-- Start 3  -->
+          <div class="header__container-login">
+            <a href="#" class="searchAnchor"><i class="fa-solid fa-magnifying-glass searchIcon"></i></a>
+            <p class="userName"></p>
+            <p><a href="login.html" class="loginBtn">login </a></p>
+            <p><a href="signUp.html" class="signupBtn">Signup</a></p>
+          </div>
+          <form action="#" class="searchForm" data-toggle="hidden">
+            <input
+              type="text"
+              name="search"
+              id="searchInput"
+              placeholder="Search"
+            />
+          </form>
+          <!-- End 3  -->
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <main class="main">
+      <div class="small__container">
+        <!-- Start 4  -->
+        <section class="slider" id="slider">
+          <div class="slider__imgs">
+            <div class="slider__imgs-img">
+              <img src="../imgs/header-7.jpg" alt="" />
+            </div>
+            <div class="slider__imgs-img">
+              <img src="../imgs/header-4.jpg" alt="" />
+            </div>
+            <div class="slider__imgs-img">
+              <h2><span>50%</span> sell</h2>
+              <img
+                src="../imgs/header-6.jpg"
+                alt=""
+                style="filter: blur(0.2rem)"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- End 4 -->
+        <section class="mainItems"></section>
+      </div>
+    </main>
+    <!-- Start 5 -->
+    <footer class="footer">
+      <div class="small__container">
+        <div class="footer__subscribe">
+          <h4>SIGN UP GET OFF FIRST PURCHASE!</h4>
+          <div class="footer__subscribe-email">
+            <input type="email" name="email" id="email" />
+            <a href="#" class="emailBtn">Subscribe</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__about">
+        <div class="footer__about-logo">
+          <h1>D<span>o</span>ts.</h1>
+        </div>
+
+        <div class="footer__about-policy">
+          <h4>Dots</h4>
+          <ul>
+            <li><a href="#">Terms and conditions</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">delivery and shipping</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer__about-yours">
+          <h4>Shopign with dots.</h4>
+          <ul>
+            <li><a href="#">Your Account</a></li>
+            <li><a href="#">Your Orders</a></li>
+            <li><a href="#">Your Adressses</a></li>
+          </ul>
+        </div>
+        <div class="footer__about-contact">
+          <h4>Contact Us</h4>
+          <h5>01023456789</h5>
+        </div>
+        <div class="footer__links">
+          <a href="" class="">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer__rights" >
+        <p>&copy;2022<span>Dots.</span> all rights reserved</p>
+      </div>
+    </footer>
+    <!-- end 5 -->
+    <script src="../js/public.js"></script>
+    <script src="/js/home.js"></script>
+    <script>
+      // Start 6
+      let imgs = document.querySelectorAll(".slider__imgs-img img");
+      let dotsSpan = document.querySelector(".slider__imgs-img h2 span");
+      let dots = document.querySelector(".slider__imgs-img h2");
+      let count = 0;
+      setInterval(function () {
+        for (let i = 0; i < imgs.length; i++) {
+          if (i == 2) dots.style.opacity = 0;
+          imgs[i].style.opacity = 0;
+        }
+        imgs[count].style.opacity = 1;
+        if (count == 2) {
+          dots.style.opacity = 1;
+        }
+        count++;
+        if (count == imgs.length) count = 0;
+      }, 2500);
+
+      let colors = ["#F3D5C0", "#F5B19C", "#FCCE77"];
+      let i = 0;
+      setInterval(function () {
+        dotsSpan.style.color = colors[i];
+        i++;
+        if (i == colors.length) i = 0;
+      }, 600);
+      // End 6
+    </script>
+  </body>
+</html>
